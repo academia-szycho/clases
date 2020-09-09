@@ -3,14 +3,14 @@
 """ eso sería para inicializar el arreglo en 3 elementos nulos si fuera necesario:
  arreglo = [0 for numero in range(3)] """
 cont = 0
-numeroleido=0
+numero_leido=0
 arreglo = []
 while cont <= 2:
     print(arreglo)
     valor = input("ingrese un número")
-    numeroleido = int(valor)
-    arreglo.append(numeroleido)
-    print(numeroleido)
+    numero_leido = int(valor)
+    arreglo.append(numero_leido)
+    print(numero_leido)
     cont = cont + 1
 
 

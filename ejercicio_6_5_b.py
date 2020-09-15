@@ -11,7 +11,7 @@ def mayuscula(cadena):
                     cadena (string): una cadena de texto
             Returns:
                     (str): una cadena con la primera letra de cada palabra en mayúsculas
-'''
+    '''
 
     lista_palabras = cadena.split(" ")
     nueva_frase = []

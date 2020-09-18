@@ -1,19 +1,35 @@
 import os
 
 dirname = os.path.dirname(__file__)
-filename = "nombres.csv"
+# filename = "nombres.csv"
+filename = "cuentas.csv"
+try:
+    f = open(os.path.join(dirname, filename), "r")
+except FileNotFoundError:
+    print("archivo no encontrado")
+    exit()
 
-f = open(os.path.join(dirname, filename), "r")
+try: 
+    encabezado = []
+    encabezado.append(f.readline().split(","))
 
-encabezado = []
-encabezado.append(f.readline().split(","))
+    cuentas = []
+    (numerador, divisor) = f.readline().split(",")
+    cuentas.append((numerador, divisor))
 
-nombres = []
-(nombre, apellido) = f.readline().split(",")
-nombres.append((nombre, apellido))
+    (numerador, divisor) = f.readline().split(",")
+    cuentas.append((numerador, divisor))
 
-(nombre, apellido) = f.readline().split(",")
-nombres.append((nombre, apellido))
+    for resultado in cuentas:
+        print(f"Resultado: {float(resultado[0])/float(resultado[1])}.")
+    
+    print("Corrió todo bien")
 
-for nombre in nombres:
-    print(f"Nombre: {nombre[0]} - Apellido: {nombre[1]}.")
+except ValueError as e:
+    print("Error de valores: revise que el archivo tenga 3 líneas como mínimo.")
+finally:
+    print("Terminé el procesamiento del archivo")
+
+print("Terminé el procesamiento del archivo")
+
+print("Fin de programa.")

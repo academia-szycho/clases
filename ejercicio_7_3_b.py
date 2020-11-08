@@ -8,7 +8,9 @@ para los n nombres que se encuentran a partir de la posición p.
 def ejercicio_siete(nombres, origen_p, n):
     '''
     '''
-    for i in range(origen_p, n + 1):
+    n = origen_p + n #Le sumo a la posición de la cual parto la cantidad de nombres que quiero imprimir.
+    
+    for i in range(origen_p, n):
         print(f"Estimado {nombres[i]}, vote por mí.")
 
 

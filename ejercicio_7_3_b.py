@@ -8,10 +8,12 @@ para los n nombres que se encuentran a partir de la posición p.
 def ejercicio_siete(nombres, origen_p, n):
     '''
     '''
-    for i in range(origen_p, n + 1):
+    assert origen_p + n < len(nombres), "No hay tantos nombres para mostrar"
+    
+    for i in range(origen_p, origen_p + n):
         print(f"Estimado {nombres[i]}, vote por mí.")
 
 
 nombres = ("Plofi", "Gabo", "Maty", "Oscar")
 
-ejercicio_siete(nombres, 0, 1)
+ejercicio_siete(nombres, 2, 3)
